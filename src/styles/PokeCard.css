@@ -1,0 +1,26 @@
+.card{
+    border-radius: 35px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card-title{
+    font-size: 2rem;
+}
+
+.card-img-top{
+    background-color: rgb(236, 223, 223);
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+form{
+    width: 80%;
+}
