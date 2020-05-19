@@ -15,9 +15,13 @@ const PokeCard = ({ pokemon, setUrl }) => {
                         <strong>Type</strong> - {pokemon.types.map((obj, idx) => idx === pokemon.types.length - 1 ? <span key={obj.type.name}>{obj.type.name}</span> : <span key={obj.type.name}>{obj.type.name}/</span>)}
                     </div>
 
-                    <form onSubmit={e => setUrl(newPokeUrl)}>
+                    <form onSubmit={e => {
+                        e.preventDefault()
+                        setUrl(newPokeUrl)
+                        setNewPokeUrl('')
+                    }}>
                         <div className="form-group" />
-                        <input onChange={e => setNewPokeUrl(e.target.value)} type="text" className="form-control" id="fetchPokemon" placeholder='Fetch new pokemon...' />
+                        <input value={newPokeUrl} onChange={e => setNewPokeUrl(e.target.value)} type="text" className="form-control" id="fetchPokemon" placeholder='Fetch new pokemon...' />
                     </form>
                 </div>
 
@@ -32,9 +36,13 @@ const PokeCard = ({ pokemon, setUrl }) => {
                             <strong>Type</strong> - ???
                 </div>
 
-                        <form onSubmit={e => setUrl(newPokeUrl)}>
+                        <form onSubmit={e => {
+                            e.preventDefault()
+                            setUrl(newPokeUrl)
+                            setNewPokeUrl('')
+                        }}>
                             <div className="form-group" />
-                            <input onChange={e => setNewPokeUrl(e.target.value)} type="text" className="form-control" id="fetchPokemon" placeholder='Fetch new pokemon...' />
+                            <input value={newPokeUrl} onChange={e => setNewPokeUrl(e.target.value)} type="text" className="form-control" id="fetchPokemon" placeholder='Fetch new pokemon...' />
                         </form>
                     </div>
 

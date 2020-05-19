@@ -4,7 +4,7 @@ import PokeCard from './PokeCard'
 const Poke = () => {
     const [poke, setPoke] = useState()
 
-    const [url, setUrl] = useState('')
+    const [url, setUrl] = useState('bulbasaur')
 
     useEffect(() => {
         async function fetchPoke (url){
@@ -16,6 +16,7 @@ const Poke = () => {
             } 
             catch{
                 
+                if(url !== '') alert(`pokemon ${url} não existe, digite corretamente`)
             }
             
         }
